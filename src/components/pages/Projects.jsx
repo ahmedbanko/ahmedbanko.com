@@ -1,6 +1,11 @@
+import { useEffect } from "react";
 import { PROJECTS } from "../../data.js";
 import ProjectItem from "../ProjectItem.jsx";
 export default function Projects() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <h1 className="text-3xl font-extrabold text-bodyText-primaryLight tracking-tight dark:text-bodyText-primaryDark mb-6">

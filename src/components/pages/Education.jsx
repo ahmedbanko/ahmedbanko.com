@@ -1,7 +1,12 @@
+import { useEffect } from "react";
 import { EDUCATION } from "../../data";
 import EducationItem from "../EducationItem";
 
 export default function Education() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <h1 className="text-3xl font-extrabold text-bodyText-primaryLight tracking-tight dark:text-bodyText-primaryDark mb-6">

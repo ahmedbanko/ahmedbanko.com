@@ -1,13 +1,13 @@
 export const PROJECTS = [
    {
     title: "Queue app",
-    description: "A web app to join queues, avoid cold/boiling waiting area and be on time. Under construction using React.js, Express.js, Node.js, MongoDB",
+    description: "A web app to join queues, avoid cold/boiling waiting area and be on time. Under construction using <strong>React.js, Express.js, Node.js, MongoDB, and AWS</strong>",
     url: null,
     sourceCode: null,
   },
   {
     title: "N-lineShop",
-    description: "Ecommerce website & business invoicing tool.",
+    description: "E-commerce website & business invoicing tool.",
     url: null,
     sourceCode: null,
   },
@@ -21,7 +21,7 @@ export const PROJECTS = [
   {
     title: "Bicycle Trip Planner",
     description:
-      "Cross-platform mobile application to plan rental bicycle trips throughout London.",
+      "Cross-platform mobile application to plan rental bicycle trips throughout London built with <strong>Flutter</strong>.",
     url: null,
     sourceCode: "https://github.com/ahmedbanko/BicycleTripPlanner",
   },
@@ -41,7 +41,7 @@ export const PROJECTS = [
   {
     title: "Qamislo XE",
     description:
-      "Pre-university project - Curreny converter app for my home town (10k+ downloads).",
+      "Pre-university project - Android Curreny converter app for my home town (10k+ downloads).",
     url: "https://play.google.com/store/apps/details?id=qamislo.xe&hl=en_IN&pli=1",
     sourceCode: null,
   },

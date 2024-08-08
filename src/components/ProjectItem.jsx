@@ -15,7 +15,7 @@ export default function ProjectItem({ project }) {
               target="_blank"
             >
               <div className="flex flex-wrap items-center">
-                {project.title}
+                <b>{project.title}</b>
                 {project.url && <FaExternalLinkAlt className="size-3 ml-1" />}
               </div>
             </a>
