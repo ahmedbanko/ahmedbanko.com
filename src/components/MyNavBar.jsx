@@ -75,7 +75,7 @@ export default function NabBar() {
   return (
     <nav
       className={
-        "p-4 sticky top-0 dark:bg-gradient-to-r dark:from-custom-gradient-dark-start dark:via-custom-gradient-dark-via dark:to-custom-gradient-dark-end bg-gradient-to-r from-custom-gradient-light-start to-custom-gradient-light-end"
+        "p-4 sticky top-0 dark:bg-gradient-to-r dark:from-custom-gradient-dark-start dark:via-custom-gradient-dark-via dark:to-custom-gradient-dark-end bg-gradient-to-r from-custom-gradient-light-start to-custom-gradient-light-end z-50"
       }
     >
       <div className="flex  justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
