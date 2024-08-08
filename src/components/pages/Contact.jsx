@@ -5,8 +5,13 @@ import {
   IoDownload,
 } from "react-icons/io5";
 import CV from "/A_Banko_CV.pdf";
+import { useEffect } from "react";
 
 export default function Contact() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const iconClass =
     "cursor-pointer text-bodyText-secondaryLight dark:text-bodyText-secondaryDark";
   return (

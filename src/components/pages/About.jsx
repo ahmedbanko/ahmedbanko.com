@@ -1,8 +1,12 @@
 import Typewriter from "../Typewriter.jsx";
 import { ABOUT_STATEMENT } from "../../data.js";
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 
 export default function About() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <h1 className="text-3xl font-extrabold text-bodyText-primaryLight tracking-tight dark:text-bodyText-primaryDark mb-6">

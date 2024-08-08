@@ -1,4 +1,4 @@
-import NavBar from "./components/MyNavBar";
+import NavBar from "./components/NavBar/MyNavBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import About from "./components/pages/About";
 import Projects from "./components/pages/Projects";
@@ -14,7 +14,7 @@ function App() {
   return (
     <Router>
       <NavBar />
-      <div className="flex justify-center my-10 md:my-20">
+      <div className="flex justify-center pt-10 md:p-0 md:my-20 pb-16">
         <div className="w-screen max-w-3xl mx-4 md:mx-0 p-6 rounded-xl bg-bodyBg-light bg-opacity-90 dark:bg-opacity-90 dark:bg-bodyBg-dark mb-10 md:mb-20">
           <Routes>
             <Route path="/" element={<About />} />

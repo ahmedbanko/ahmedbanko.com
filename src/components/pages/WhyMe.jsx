@@ -1,6 +1,11 @@
+import { useEffect } from "react";
 import { WHY_ME } from "../../data";
 
 export default function WhyMe() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <h1 className="text-3xl font-extrabold text-bodyText-primaryLight tracking-tight dark:text-bodyText-primaryDark mb-6">
