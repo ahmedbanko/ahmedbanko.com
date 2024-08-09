@@ -39,9 +39,9 @@ export default function MobileNavBar() {
   };
 
   const navLinkBaseClass =
-    "flex flex-col items-center justify-center w-20 h-16 rounded-lg transition-colors hover:bg-inherit";
+    "flex flex-col items-center justify-center w-20 h-16 rounded-lg transition-colors hover:bg-opacity-0";
   const navLinkActiveClass =
-    "bg-gray-800 text-gray-300 dark:bg-gray-700 dark:text-gray-400 hover:bg-gray-800";
+    "bg-gray-800 text-gray-300 dark:bg-gray-700 dark:text-gray-400 hover:bg-gray-800 hover:bg-opacity-100";
   const navLinkInactiveClass =
     "text-gray-300 dark:text-gray-400 hover:bg-gray-700 dark:hover:bg-gray-600";
   const iconsSize = 19;
