@@ -39,12 +39,12 @@ export default function NavBar() {
         {"Stack"}
       </NavLink>
       <NavLink
-        to="/education"
+        to="/experience"
         className={({ isActive }) =>
           isActive ? `${navLinkClass} ${navLinkActiveClass}` : navLinkClass
         }
       >
-        {"Education"}
+        {"Experience"}
       </NavLink>
       <NavLink
         to="/why-me"

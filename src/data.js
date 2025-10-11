@@ -1,15 +1,23 @@
 export const PROJECTS = [
-   {
-    title: "Queue app",
-    description: "A web app to join queues, avoid cold/boiling waiting area and be on time. Under construction using <strong>React.js, Express.js, Node.js, MongoDB, and AWS</strong>",
+  {
+    title: "Loyalty app",
+    description: "Digital platform built with <strong>Node.js, PostgreSQL, Redis, AWS, Docker, and Flutter</strong> for iOS and Android apps.",
     url: null,
     sourceCode: null,
+  },
+   {
+    title: "Queue app",
+    description: "A web app to join queues, avoid cold/boiling waiting area and be on time. Built using <strong>React.js, Express.js, Node.js, MongoDB, and AWS</strong>",
+    url: null,
+    sourceCode: null,
+    status: "discontinued",
   },
   {
     title: "N-lineShop",
     description: "E-commerce website & business invoicing tool.",
     url: null,
     sourceCode: null,
+    status: "discontinued",
   },
   {
     title: "RIMP",
@@ -51,64 +59,28 @@ export const ABOUT_STATEMENT = `Welcome to my little corner of the internet, whe
 
 export const STACK_ITEMS = [
   {
-    title: "Visual Studio",
-    subtitle: "Where my code dreams come true",
-    imgName: "vs-logo.png",
-    url: "https://code.visualstudio.com",
+    title: "AWS",
+    subtitle: "The cloud platform powering the internet",
+    imgName: "aws-logo.png",
+    url: "https://aws.amazon.com",
   },
   {
-    title: "Java",
-    subtitle: "The language that powers your coffee machine",
-    imgName: "java-logo.png",
-    url: "https://www.java.com",
+    title: "Docker",
+    subtitle: "Containerizing applications for seamless deployment",
+    imgName: "docker-logo.png",
+    url: "https://www.docker.com",
   },
   {
-    title: "Python",
-    subtitle: "For when you want to be as cool as a snake",
-    imgName: "python-logo.png",
-    url: "https://www.python.org",
+    title: "OpenAI API",
+    subtitle: "Building the future with artificial intelligence",
+    imgName: "openai-logo.png",
+    url: "https://openai.com/api",
   },
   {
-    title: "C++",
-    subtitle: "The language that screams efficiency",
-    imgName: "cpp-logo.png",
-    url: "https://isocpp.org",
-  },
-  {
-    title: "JavaScript",
-    subtitle: "Making the web dance since 1995",
-    imgName: "javaScript-logo.png",
-    url: "https://www.javascript.com",
-  },
-  {
-    title: "Scala",
-    subtitle: "For the language hipsters out there",
-    imgName: "scala-logo.png",
-    url: "https://www.scala-lang.org",
-  },
-  {
-    title: "Dart",
-    subtitle: "When you want to build apps at the speed of light",
-    imgName: "dart-logo.png",
-    url: "https://dart.dev",
-  },
-  {
-    title: "HTML",
-    subtitle: "The building blocks of the web",
-    imgName: "html-logo.png",
-    url: "https://en.wikipedia.org/wiki/HTML",
-  },
-  {
-    title: "CSS",
-    subtitle: "Making the web look pretty since forever",
-    imgName: "css-logo.png",
-    url: "https://www.w3.org/Style/CSS/Overview.en.html",
-  },
-  {
-    title: "Flutter",
-    subtitle: "For building beautiful native apps",
-    imgName: "flutter-logo.png",
-    url: "https://flutter.dev",
+    title: "Dagster",
+    subtitle: "The data orchestration platform for machine learning and ETL",
+    imgName: "dagster-logo.png",
+    url: "https://dagster.io",
   },
   {
     title: "Django",
@@ -117,46 +89,10 @@ export const STACK_ITEMS = [
     url: "https://www.djangoproject.com",
   },
   {
-    title: "React",
-    subtitle: "The heart and soul of modern web development",
-    imgName: "react-logo.png",
-    url: "https://react.dev",
-  },
-  {
-    title: "Node.js",
-    subtitle: "For when JavaScript wants to be taken seriously",
-    imgName: "nodejs-logo.png",
-    url: "https://nodejs.org/en",
-  },
-  {
-    title: "Figma",
-    subtitle: "My go-to tool to visualizing and prototyping my ideas",
-    imgName: "figma-logo.png",
-    url: "https://www.figma.com",
-  },
-  {
-    title: "Tailwind",
-    subtitle: "The CSS framework that's all about utility",
-    imgName: "tailwind-logo.png",
-    url: "https://tailwindcss.com",
-  },
-  {
-    title: "Bootstrap",
-    subtitle: "The classic choice for building responsive sites",
-    imgName: "bootstrap-logo.png",
-    url: "https://getbootstrap.com",
-  },
-  {
-    title: "AJAX",
-    subtitle: "For when you want your web apps to be extra smooth",
-    imgName: "ajax-logo.png",
-    url: "https://en.wikipedia.org/wiki/Ajax_(programming)",
-  },
-  {
-    title: "jQuery",
-    subtitle: "Making DOM manipulation a breeze",
-    imgName: "jquery-logo.png",
-    url: "https://jquery.com",
+    title: "PostgreSQL",
+    subtitle: "The world's most advanced open source database",
+    imgName: "postgresql-logo.png",
+    url: "https://www.postgresql.org",
   },
   {
     title: "SQL",
@@ -171,10 +107,46 @@ export const STACK_ITEMS = [
     url: "https://firebase.google.com",
   },
   {
-    title: "Git",
-    subtitle: "The lifesaver for version control",
-    imgName: "git-logo.png",
-    url: "https://git-scm.com",
+    title: "Python",
+    subtitle: "For when you want to be as cool as a snake",
+    imgName: "python-logo.png",
+    url: "https://www.python.org",
+  },
+  {
+    title: "Poetry",
+    subtitle: "Modern dependency management for Python",
+    imgName: "poetry-logo.png",
+    url: "https://python-poetry.org",
+  },
+  {
+    title: "pytest",
+    subtitle: "Simple yet powerful Python testing framework",
+    imgName: "pytest-logo.png",
+    url: "https://pytest.org",
+  },
+  {
+    title: "JavaScript",
+    subtitle: "Making the web dance since 1995",
+    imgName: "javaScript-logo.png",
+    url: "https://www.javascript.com",
+  },
+  {
+    title: "Node.js",
+    subtitle: "For when JavaScript wants to be taken seriously",
+    imgName: "nodejs-logo.png",
+    url: "https://nodejs.org/en",
+  },
+  {
+    title: "React",
+    subtitle: "The heart and soul of modern web development",
+    imgName: "react-logo.png",
+    url: "https://react.dev",
+  },
+  {
+    title: "Java",
+    subtitle: "The language that powers your coffee machine",
+    imgName: "java-logo.png",
+    url: "https://www.java.com",
   },
   {
     title: "jUnit",
@@ -182,9 +154,48 @@ export const STACK_ITEMS = [
     imgName: "junit-logo.png",
     url: "https://junit.org/junit5/",
   },
+  {
+    title: "HTML",
+    subtitle: "The building blocks of the web",
+    imgName: "html-logo.png",
+    url: "https://en.wikipedia.org/wiki/HTML",
+  },
+  {
+    title: "CSS",
+    subtitle: "Making the web look pretty since forever",
+    imgName: "css-logo.png",
+    url: "https://www.w3.org/Style/CSS/Overview.en.html",
+  },
+  {
+    title: "Tailwind",
+    subtitle: "The CSS framework that's all about utility",
+    imgName: "tailwind-logo.png",
+    url: "https://tailwindcss.com",
+  },
+  {
+    title: "Git",
+    subtitle: "The lifesaver for version control",
+    imgName: "git-logo.png",
+    url: "https://git-scm.com",
+  },
+  {
+    title: "Figma",
+    subtitle: "My go-to tool to visualizing and prototyping my ideas",
+    imgName: "figma-logo.png",
+    url: "https://www.figma.com",
+  },
 ];
 
 export const EDUCATION = [
+  {
+    institution: "Paperplanes UK",
+    startYear: "Sep 2024",
+    endYear: "Present",
+    description:
+      "Senior Software Engineer at Europe's leading provider of insight-driven Programmatic Direct Mail. Working on data-driven personalized direct mail campaigns for e-commerce businesses, integrating with platforms like Shopify and Klaviyo.",
+    modules: null,
+    type: "work",
+  },
   {
     institution: "King's College London",
     startYear: "2020",
@@ -241,12 +252,19 @@ export const EDUCATION = [
   },
 ];
 
-export const WHY_ME = [
-  "Strong Educational Background.",
-  "Diverse Programming Skills.",
-  "Versatile Understanding of Programming Language Paradigms.",
-  "Collaborative Team Player.",
-  "Attention to Detail.",
-  "Problem-Solving Skills.",
-  "Continuous Learning.",
+export const WHY_ME_TECHNICAL = [
+  "Full Stack Software Engineer with Cloud DevOps & Infrastructure expertise.",
+  "AWS certified professional with proven cloud and AI expertise.",
+  "Specializes in building scalable, resilient, and data-driven systems.",
+  "1+ year experience as Software Developer at Paperplanes UK (programmatic direct mail).",
+  "First-Class Honours Computer Science graduate from King's College London.",
+  "Direct Marketing certified professional with Award in Direct Mail.",
+  "Continuous learner with expertise in AI, Machine Learning, and innovative solutions.",
 ];
+
+export const WHY_ME_SOFT_SKILLS = [
+  "Strong problem-solving skills and attention to detail.",
+  "Collaborative team player with excellent communication abilities.",
+  "Multilingual professional: fluent in English, Kurdish, Arabic, and Turkish.",
+];
+  

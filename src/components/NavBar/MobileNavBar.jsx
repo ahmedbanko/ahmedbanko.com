@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { IoSunny, IoMoon, IoSchoolOutline } from "react-icons/io5";
 import { useTheme } from "../../context/ThemeContext";
 import { NavLink } from "react-router-dom";
@@ -7,36 +7,40 @@ import {
   FiBriefcase,
   FiUser,
   FiMessageSquare,
+  FiChevronRight,
 } from "react-icons/fi";
 import { GoStack } from "react-icons/go";
 
 export default function MobileNavBar() {
   const { toggleIsDark } = useTheme();
   const navRef = useRef(null);
+  const [showScrollIndicator, setShowScrollIndicator] = useState(true);
 
   function handleThemeToggle() {
     toggleIsDark((prevVal) => !prevVal);
   }
 
   useEffect(() => {
-    scroll("right");
-    setTimeout(() => {
-      scroll("left");
-    }, 300);
+    const handleScroll = () => {
+      if (navRef.current) {
+        const { scrollLeft, scrollWidth, clientWidth } = navRef.current;
+        const isAtEnd = scrollLeft + clientWidth >= scrollWidth - 10;
+        setShowScrollIndicator(!isAtEnd);
+      }
+    };
+
+    if (navRef.current) {
+      navRef.current.addEventListener("scroll", handleScroll);
+      handleScroll(); // Check initial state
+    }
+
+    return () => {
+      if (navRef.current) {
+        navRef.current.removeEventListener("scroll", handleScroll);
+      }
+    };
   }, []);
 
-  const scroll = (direction) => {
-    if (navRef.current) {
-      // Reduce the scroll amount to make the scroll slower
-      const scrollAmount = navRef.current.offsetWidth / 2; // Halved the scroll distance
-
-      if (direction === "left") {
-        navRef.current.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-      } else if (direction === "right") {
-        navRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
-      }
-    }
-  };
 
   const navLinkBaseClass =
     "flex flex-col items-center justify-center w-20 h-16 rounded-lg transition-colors hover:bg-opacity-0";
@@ -49,7 +53,12 @@ export default function MobileNavBar() {
   return (
     <nav className="md:hidden fixed bottom-0 w-full bg-gradient-to-r from-custom-gradient-light-start to-custom-gradient-light-end dark:bg-gradient-to-r dark:from-custom-gradient-dark-start dark:via-custom-gradient-dark-via dark:to-custom-gradient-dark-end text-gray-300 z-50">
       <div className="relative flex items-center justify-between py-1 overflow-x-auto scroll-smooth" ref={navRef}>
-        <ul className="flex gap-4 px-2 text-xs font-semibold text-center">
+        {showScrollIndicator && (
+          <div className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gradient-to-l from-gray-900 via-gray-900 to-transparent dark:from-gray-800 dark:via-gray-800 dark:to-transparent w-8 h-full flex items-center justify-end pr-1 pointer-events-none z-10">
+            <FiChevronRight className="text-gray-300 animate-pulse" size={14} />
+          </div>
+        )}
+        <ul className="flex gap-1 px-2 text-xs font-semibold text-center">
           <li>
             <NavLink
               to="/"
@@ -103,7 +112,7 @@ export default function MobileNavBar() {
           </li>
           <li>
             <NavLink
-              to="/education"
+              to="/experience"
               className={({ isActive }) =>
                 isActive
                   ? `${navLinkBaseClass} ${navLinkActiveClass}`
@@ -113,7 +122,7 @@ export default function MobileNavBar() {
               <div className="flex flex-col items-center gap-1">
                 <IoSchoolOutline size={iconsSize} />
                 <p>
-                  <b>{"Education"}</b>
+                  <b>{"Experience"}</b>
                 </p>
               </div>
             </NavLink>
