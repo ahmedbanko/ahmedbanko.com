@@ -1,8 +1,8 @@
 export const PROJECTS = [
   {
-    title: "Loyalty app",
+    title: "LoyaltiesHub",
     description: "Digital platform built with <strong>Node.js, PostgreSQL, Redis, AWS, Docker, and Flutter</strong> for iOS and Android apps.",
-    url: null,
+    url: "https://www.loyaltieshub.com",
     sourceCode: null,
   },
    {
