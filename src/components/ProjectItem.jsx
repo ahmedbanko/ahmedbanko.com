@@ -7,19 +7,27 @@ import { MdCancel } from "react-icons/md";
 export default function ProjectItem({ project }) {
   return (
     <li className="container mx-auto">
-      <div className="flex flex-wrap justify-between md:space-x-10">
+      <article className="flex flex-wrap justify-between md:space-x-10">
         <div className="flex">
           <div className="container mx-auto">
-            <a
-              className="text-m font-medium text-bodyText-primaryLight truncate dark:text-bodyText-primaryDark"
-              href={project.url}
-              target="_blank"
-            >
-              <div className="flex flex-wrap items-center">
-                <b>{project.title}</b>
-                {project.url && <FaExternalLinkAlt className="size-3 ml-1" />}
-              </div>
-            </a>
+            {project.url ? (
+              <a
+                className="text-m font-medium text-bodyText-primaryLight truncate dark:text-bodyText-primaryDark"
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={`Open ${project.title}`}
+              >
+                <div className="flex flex-wrap items-center">
+                  <h2 className="text-base font-bold inline">{project.title}</h2>
+                  <FaExternalLinkAlt className="size-3 ml-1" aria-hidden="true" />
+                </div>
+              </a>
+            ) : (
+              <h2 className="text-base font-bold text-bodyText-primaryLight dark:text-bodyText-primaryDark">
+                {project.title}
+              </h2>
+            )}
             <p
               className="text-sm max-w-lg text-bodyText-secondaryLight dark:text-bodyText-secondaryDark"
               dangerouslySetInnerHTML={{ __html: project.description }}
@@ -32,23 +40,27 @@ export default function ProjectItem({ project }) {
             disabled
           >
             <MdCancel className="mr-1 size-4" />
-            <a className="mr-1">Discontinued</a>
+            <span className="mr-1">Discontinued</span>
           </button>
         ) : project.sourceCode ? (
-          <button
+          <a
             className="flex min-w-32 max-h-8 min-h-6 text-xs items-center bg-gray-400 text-gray-950 hover:text-navBarText-light rounded-full px-4 py-2 hover:bg-gradient-lightStart dark:bg-gray-800 dark:text-white dark:hover:bg-gray-600"
-            onClick={() => window.open(project.sourceCode, "_blank")}
+            href={project.sourceCode}
+            target="_blank"
+            rel="noopener noreferrer"
+            title={`View source code for ${project.title} on GitHub`}
+            aria-label={`View source code for ${project.title} on GitHub`}
           >
             <FaGithub className="mr-2 size-4" />
             View Source
-          </button>
+          </a>
         ) : project.url ? (
           <button
             className="flex justify-center min-w-32 max-h-8 min-h-6 text-xs bg-gray-300 dark:bg-gray-800 text-gray-950 rounded-full py-2 dark:text-white"
             disabled
           >
             <RiGitRepositoryPrivateLine className="mr-1 size-4" />
-            <a className="mr-1">Private</a>
+            <span className="mr-1">Private</span>
           </button>
         ) : (
           <button
@@ -56,10 +68,10 @@ export default function ProjectItem({ project }) {
             disabled
           >
             <TbAlpha className="mr-1 size-4" />
-            <a className="mr-1">Alpha</a>
+            <span className="mr-1">Alpha</span>
           </button>
         )}
-      </div>
+      </article>
     </li>
   );
 }

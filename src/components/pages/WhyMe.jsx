@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { WHY_ME_TECHNICAL, WHY_ME_SOFT_SKILLS } from "../../data";
+import { Helmet } from "react-helmet-async";
 
 export default function WhyMe() {
   useEffect(() => {
@@ -8,6 +9,14 @@ export default function WhyMe() {
 
   return (
     <>
+      <Helmet>
+        <title>Why Hire Me — Ahmed Banko | AWS Certified Full Stack Engineer</title>
+        <meta name="description" content="Why hire Ahmed Banko: AWS certified Full Stack Software Engineer with cloud DevOps expertise, First-Class CS from King's College London, multilingual (English, Kurdish, Arabic, Turkish)." />
+        <link rel="canonical" href="https://ahmedbanko.com/why-me" />
+        <meta property="og:url" content="https://ahmedbanko.com/why-me" />
+        <meta property="og:title" content="Why Hire Ahmed Banko" />
+        <meta property="og:description" content="AWS certified Full Stack Engineer with cloud DevOps expertise and First-Class Computer Science from King's College London." />
+      </Helmet>
       <h1 className="text-3xl font-extrabold text-bodyText-primaryLight tracking-tight dark:text-bodyText-primaryDark mb-6">
         WHY HIRE ME?
       </h1>
