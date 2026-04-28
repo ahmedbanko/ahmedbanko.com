@@ -1,0 +1,30 @@
+# Ahmed Banko
+
+> Personal portfolio of Ahmed Banko — a London-based Full Stack Software Engineer and AWS certified cloud specialist. First-Class Honours BSc in Computer Science from King's College London. Currently Senior Software Engineer at Paperplanes UK, building data-driven personalised direct mail systems that integrate with platforms like Shopify and Klaviyo.
+
+This site is a single-page React application; the URLs below are the canonical entry points for each section. Crawling any of them returns the same HTML shell with full metadata, JSON-LD `Person` and `WebSite` schema, and a `<noscript>` fallback summarising the content of every section.
+
+## Pages
+
+- [About](https://ahmedbanko.com/): Introduction, background and current role.
+- [Projects](https://ahmedbanko.com/projects): Selected software projects, including LoyaltiesHub, RIMP, Bicycle Trip Planner, Chess Clubs Management System and Qamislo XE.
+- [Tech Stack](https://ahmedbanko.com/stack): Technologies and tools — AWS, Docker, OpenAI API, Dagster, Django, PostgreSQL, Python, Node.js, React, Java, Tailwind, Git and more.
+- [Experience & Education](https://ahmedbanko.com/experience): Roles and degrees, including Paperplanes UK and King's College London.
+- [Why Hire Me](https://ahmedbanko.com/why-me): Technical strengths and soft skills.
+- [Contact](https://ahmedbanko.com/contact): Email, LinkedIn, GitHub and CV download.
+
+## Resources
+
+- [CV (PDF)](https://ahmedbanko.com/A_Banko_CV.pdf)
+- [Sitemap](https://ahmedbanko.com/sitemap.xml)
+- [Source code](https://github.com/ahmedbanko/ahmedbanko.com)
+
+## Contact
+
+- Email: contact@ahmedbanko.com
+- LinkedIn: https://www.linkedin.com/in/ahmed-banko
+- GitHub: https://github.com/ahmedbanko
+
+## About the author
+
+Ahmed Banko is a Full Stack Software Engineer based in London, UK. He is AWS certified and specialises in building scalable, resilient, data-driven systems across cloud, DevOps and full-stack web. He is multilingual: fluent in English, Kurdish, Arabic and Turkish.

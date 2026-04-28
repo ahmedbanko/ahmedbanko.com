@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { IoHome } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 export default function PageNotFound() {
   useEffect(() => {
@@ -9,6 +10,10 @@ export default function PageNotFound() {
 
   return (
     <>
+      <Helmet>
+        <title>Page Not Found — Ahmed Banko</title>
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
       <h1 className="text-3xl font-extrabold text-bodyText-primaryLight tracking-tight dark:text-bodyText-primaryDark mb-6">
         PAGE NOT FOUND
       </h1>
